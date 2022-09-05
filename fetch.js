@@ -9,11 +9,6 @@ const get_data = async (id) => {
         }
     });
     const json = await response.json();
-    // console.log(json);
-    // console.log(json.original_title); // titulo
-    // console.log(json.overview); // descripcion
-    // console.log(json.backdrop_path); // imagen
-    // console.log(json.vote_average); // puntuación
     const score = Math.round(json.vote_average * 100) / 100;
 
     let data =  `
