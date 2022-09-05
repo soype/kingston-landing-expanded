@@ -5,7 +5,6 @@ const get_data = async (id) => {
     const api_html = `https://api.themoviedb.org/3/movie/10${id}?api_key=8964560b5480d6f8ccf3c73c7a53fbde`;
     const response = await fetch(api_html,{
         headers: {
-            'Authorization': 'Bearer 8964560b5480d6f8ccf3c73c7a53fbde',
             'Content-Type': 'application/json;charset=utf-8'
         }
     });
