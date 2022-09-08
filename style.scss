@@ -20,7 +20,7 @@ html{
     height: 300vh;
     width: 50%;
     background-color: darkred;
-    z-index: 11;
+    z-index: -11;
 
     animation: openCourtain 2s ease-out 1s forwards;
 }
@@ -55,6 +55,8 @@ html{
     justify-content: space-between;
     background-color: rgb(195, 150, 74);
     background: fill;
+    align-items: center;
+    z-index: -2;
 }
 
 .logo{
@@ -93,6 +95,7 @@ html{
 }
 
 .content{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,6 +121,7 @@ $text-color: rgba(219, 66, 66, .9);
 
 .page-1{
     height: 85vh; // porque el navi tiene 15vh
+    z-index: 1;
 }
 
 .message{
@@ -149,13 +153,61 @@ $text-color: rgba(219, 66, 66, .9);
 
 .page-2{
     background-color: rgb(65, 62, 62);
+    background-image: none;
+    position: relative;
+    
 }
+
 
 .movies{
     display: grid;
     grid-template-columns: 10rem 10rem 10rem 10rem;
     grid-template-rows: 10rem 10rem;
     gap: 3rem 3rem;
+}
+
+.card{
+    z-index: 2;
+}
+
+.stars{
+    position: absolute;
+    height: 100vh;
+    width: 100vw; 
+    
+}
+
+.star{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-1{
+    right: 90%;
+    top: 90%;
+}
+
+.star-2{
+    right: 66%;
+    top: 15%;
+}
+
+.star-3{
+    right: 50%;
+    top: 30%;
+}
+
+.star-4{
+    right: 35%;
+    top: 65%;
+}
+
+.star-5{
+    right: 10%;
+    top: 10%;
 }
 
 .card{
@@ -223,19 +275,19 @@ $text-color: rgba(219, 66, 66, .9);
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-top: .2rem;
+    padding: .5rem;
 }
 
 .movie-desc{
     position: absolute;
     top: -9rem;
     color: white;
-    font-size: .8rem;
-    padding-right: .3rem;
+    font-size: .6rem;
+    padding: .5rem;
     overflow: hidden;
     text-align: justify;
-    text-overflow: ellipsis;
-    max-height: 7.8rem;
+    text-overflow:clip;
+    max-height: 8rem;
 }
 
 
